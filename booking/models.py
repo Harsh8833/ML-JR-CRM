@@ -7,4 +7,4 @@ class newbook(models.Model):
     form=models.FileField( upload_to="files", blank=True)
     pan=models.FileField( upload_to="files", blank=True)
     aadhar=models.FileField(upload_to="files", blank=True)
-    id=models.AutoField(primary_key=True)
+    booking_id=models.AutoField(primary_key=True)
