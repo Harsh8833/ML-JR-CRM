@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %} {% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM</title>
-</head>
-
-<body>
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="d-grid gap-3">
+        <button class="btn btn-primary btn-lg" type="button">Create New Booking</button>
+        <button class="btn btn-primary btn-lg" type="button">Find Existing Booking</button>
+        <button class="btn btn-primary btn-lg" type="button">Logout</button>
+    </div>
+</div>
 
 
-
-</body>
-
-</html>
+{% endblock %}
