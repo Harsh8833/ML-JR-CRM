@@ -19,9 +19,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from crm import views
+from booking import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('menu.urls'))
+    path('', include('menu.urls')),
+    path('newbooking/', views.newbooking ),
+    path('existingbooking/', views.existingbooking ),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
