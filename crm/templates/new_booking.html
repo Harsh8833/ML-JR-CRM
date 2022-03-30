@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="d-flex justify-content-center">
+    <div>
+        <h3 class="form_heading">Create new Customer Id</h3>
+        <form>
+            <div class="form-floating mb-4" style="width: 300px;">
+                <input type="name" class="form-control" name="name" id="name" placeholder="Name">
+                <label class="text-dark" for="name">Name</label>
+            </div>
+            <div class="form-floating mb-4" style="width: 300px;">
+                <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone No.">
+                <label class="text-dark" for="bid">Phone No.</label>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload Form</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload Aadhar Card</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload Pan Card
+                    <input class="form-control" type="file" id="formFile">
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+
+
+    </div>
+</div>
+
+
+
+{% endblock %}
