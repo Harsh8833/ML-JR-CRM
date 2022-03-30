@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from booking.models import newBooking
-
+from django.contrib import messages
 # Create your views here.
 @login_required
 def home(request):
@@ -26,4 +26,6 @@ def saveEnquiry(request):
 
         en=newBooking(cname=cname, phone=phone, form=form, pan=pan, aadhar=aadhar)
         en.save()
+        messages.success(request, "Data inserted successfully")
+        
     return render(request,"new_booking.html")

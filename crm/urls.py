@@ -28,5 +28,5 @@ urlpatterns = [
     path('newbooking/', views.newbooking ),
     path('existingbooking/', views.existingbooking ),
     path('', views.home),
-    path('saveform/', views.saveEnquiry, name="info saved")
+    path('saveform/', views.saveEnquiry, name="saveform")
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

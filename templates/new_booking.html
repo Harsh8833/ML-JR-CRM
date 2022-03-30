@@ -1,7 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 
+<head>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        {% for msg in messages %}
+            swal('{{ msg }}');
+        {% endfor %}
+    </script
+</head>
+
 <div class="d-flex justify-content-center">
     <div>
+
+        
         <h3 class="form_heading">Create new Customer Id</h3>
         <form action="{% url 'saveform' %}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
