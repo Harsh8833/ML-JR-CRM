@@ -15,12 +15,10 @@ def newbooking(request):
 def search(request):
     if request.method=="POST":
         bid=request.POST['bid']
-        cus= newBooking.objects.filter(booking_id__contains=bid)
-        return render(request, 'search.html',  
-        {'bid':bid, 'cus':cus})
+        customer= newBooking.objects.filter(booking_id__contains=bid)
+        return render(request, 'search.html', {'bid':bid, 'customer':customer})
     else:
-        return render(request, 'search.html',
-        {})
+        return render(request, 'search.html', {})
 
 @login_required
 def existingbooking(request):

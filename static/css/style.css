@@ -4,10 +4,6 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.gray_container {
-    color: gray;
-}
-
 .container {
     padding-top: 7%;
     align-content: center;
@@ -20,10 +16,10 @@ input::-webkit-inner-spin-button {
 }
 
 .card-main {
-    color: aqua;
     background-color: darkgray;
     border-radius: 30px;
     padding: 70px;
+    margin: 20px;
 }
 
 .form_heading {
