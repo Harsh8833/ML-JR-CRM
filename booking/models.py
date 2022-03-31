@@ -4,7 +4,7 @@ from django.db import models
 class newBooking(models.Model):
     cname = models.CharField(max_length=50, blank=False)
     phone = models.IntegerField(blank=False)
-    form = models.FileField( upload_to="files", blank=False, null= False)
-    pan = models.FileField( upload_to="files", blank=False, null=False)
-    aadhar = models.FileField(upload_to="files", blank=False , null=False)
+    form = models.FileField( upload_to="files/%Y/%m/%d/", blank=False)
+    pan = models.FileField( upload_to="files/%Y/%m/%d/", blank=False)
+    aadhar = models.FileField(upload_to="files/%Y/%m/%d/", blank=False)
     booking_id = models.AutoField(primary_key=True)
