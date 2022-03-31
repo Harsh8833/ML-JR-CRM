@@ -11,8 +11,15 @@ def home(request):
 def newbooking(request):
     return render(request, 'new_booking.html')
 
+@login_required
 def search(request):
-    return render(request, 'search.html')
+    if request.method=="POST":
+        bid=request.POST['bid']
+        return render(request, 'search.html',  
+        {'bid':bid})
+    else:
+        return render(request, 'search.html',
+        {})
 
 @login_required
 def existingbooking(request):

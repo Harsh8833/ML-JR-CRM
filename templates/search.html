@@ -1,7 +1,13 @@
 {% extends 'base.html' %} {% block content %}
     <center>
-    <h1>You Searched For...</h1>
+    {% if bid %}
+        <h1>You Searched For {{ bid }}</h1>
 
+    {% else %}
+        <h1>Hey! You Forgot To Search For A Costomer...</h1>
+    {% endif %}
+    
+    
     </center>
 
 
