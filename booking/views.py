@@ -16,16 +16,21 @@ def newbooking(request):
 def existingbooking(request):
     return render(request, 'existing_booking.html')
 
-def saveEnquiry(request):
-    if request.method=="POST":
-        cname=request.POST.get('cname')
-        phone=request.POST.get('phone')
-        form=request.FILES.get('form')
-        pan=request.FILES.get('pan')
-        aadhar=request.FILES.get('aadhar')
 
-        en=newBooking(cname=cname, phone=phone, form=form, pan=pan, aadhar=aadhar)
-        en.save()
-        messages.success(request, "Data inserted successfully")
+@login_required
+def saveEnquiry(request):
+    try:
+        if request.method=="POST":
+            cname=request.POST.get('cname')
+            phone=request.POST.get('phone')
+            form=request.FILES.get('form')
+            pan=request.FILES.get('pan')
+            aadhar=request.FILES.get('aadhar')
+
+            en=newBooking(cname=cname, phone=phone, form=form, pan=pan, aadhar=aadhar)
+            en.save()
+            messages.success(request, "Customer added successfully")
+    except:
+        messages.error(request, "Unable to add Customer")
         
     return render(request,"new_booking.html")

@@ -19,6 +19,13 @@ input::-webkit-inner-spin-button {
     padding: 10%;
 }
 
+.card-main {
+    color: aqua;
+    background-color: darkgray;
+    border-radius: 30px;
+    padding: 70px;
+}
+
 .form_heading {
     padding-top: 5%;
     padding-bottom: 5%;

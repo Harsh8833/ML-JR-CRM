@@ -1,3 +1,32 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.gray_container {
+    color: gray;
+}
+
 .container {
-    padding: 20%;
+    padding-top: 7%;
+    align-content: center;
+}
+
+.or {
+    font-size: large;
+    font-weight: bold;
+    padding: 10%;
+}
+
+.form_heading {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.card-main {
+    color: aqua;
+    background-color: darkgray;
+    border-radius: 30px;
+    padding: 70px;
 }

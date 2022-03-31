@@ -16,10 +16,16 @@
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../">
+            <a class="navbar-brand" href="/">
                 <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> CRM-Django
             </a>
+            {% if request.user.is_authenticated%}
+
+            <p class="text-light">Hi {{ user.username }}! <a class="text-warning" href="{% url 'logout' %}">Log Out</a></p>
+
+            {% endif %}
         </div>
+
     </nav>
 
 
