@@ -10,7 +10,7 @@
             <form method=POST action="{% url 'search-data' %}">
                 {% csrf_token %} 
                 <div class="form-floating mb-4" style="width: 300px;">
-                    <input type="search" class="form-control" name="bid" id="bid"  placeholder="Booking Id">
+                    <input type="search" class="form-control" name="bid" id="bid" placeholder="Booking Id">
                     <label class="text-dark" for="bid">Booking Id</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Search</button>
