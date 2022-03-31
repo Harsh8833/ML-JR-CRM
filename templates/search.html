@@ -2,6 +2,10 @@
     <center>
     {% if bid %}
         <h1>You Searched For {{ bid }}</h1>
+        <br/>
+        {% for a in cus %}
+            {{ a }} - {{ a.cname }} - {{ a.phone }}   <br/>
+        {% endfor %}
 
     {% else %}
         <h1>Hey! You Forgot To Search For A Costomer...</h1>

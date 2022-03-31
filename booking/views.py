@@ -15,8 +15,9 @@ def newbooking(request):
 def search(request):
     if request.method=="POST":
         bid=request.POST['bid']
+        cus= newBooking.objects.filter(booking_id__contains=bid)
         return render(request, 'search.html',  
-        {'bid':bid})
+        {'bid':bid, 'cus':cus})
     else:
         return render(request, 'search.html',
         {})
