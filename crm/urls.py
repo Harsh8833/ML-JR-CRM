@@ -26,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include("django.contrib.auth.urls")),
     path('newbooking/', views.newbooking ),
+    path('otpauth/', views.otpauth ),
     path('existingbooking/', views.existingbooking ),
     path('', views.home),
     path('saveform/', views.saveEnquiry, name="saveform"),

@@ -75,3 +75,16 @@ input::-webkit-inner-spin-button {
     background-color: rgba(0, 0, 0, 0.4);
     /* Black w/ opacity */
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.top-right {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}

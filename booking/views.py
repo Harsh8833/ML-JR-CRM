@@ -8,6 +8,10 @@ def home(request):
     return render(request, 'home.html')
 
 @login_required
+def otpauth(request):
+    return render(request, 'otp_auth.html')
+
+@login_required
 def newbooking(request):
     return render(request, 'new_booking.html')
 
