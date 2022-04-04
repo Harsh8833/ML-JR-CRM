@@ -16,9 +16,12 @@ def search(request):
     if request.method=="POST":
         bid=request.POST['bid']
         customer= newBooking.objects.filter(booking_id=bid)
-        return render(request, 'ledger_menu.html', {'bid':bid, 'customer':customer})
+        if (len(customer) > 0):
+            return render(request, 'ledger_menu.html', {'bid':bid, 'customer':customer[0]})
+        else:
+            return render(request, 'invalid_booking.html')
     else:
-        return render(request, 'ledger_menu.html', {})
+        return render(request, 'invalid_booking.html')
 
 @login_required
 def existingbooking(request):

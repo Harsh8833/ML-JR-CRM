@@ -32,6 +32,13 @@ input::-webkit-inner-spin-button {
     margin: 20px;
 }
 
+.card-ledger {
+    background-color: #9BCB3C;
+    border-radius: 30px;
+    padding: 70px;
+    margin: 20px;
+}
+
 .form_heading {
     padding-top: 5%;
     padding-bottom: 5%;

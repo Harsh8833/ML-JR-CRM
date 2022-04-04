@@ -8,4 +8,12 @@ $(document).ready(function() {
         $("#otpdiv").hide();
         $("#ledgerdiv").show();
     });
+
+
+});
+
+$(document).ready(function() {
+    $("#btn1").click(function() {
+        $("#pop").hide();
+    });
 });

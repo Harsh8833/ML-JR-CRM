@@ -1,18 +1,35 @@
-{% extends 'base.html' %} {% block content %} {% csrf_token %} {% if bid %}
-<h1>Ledger Menu for booking id{{ bid }}</h1>
+{% extends 'base.html' %} {% block content %} {% csrf_token %}
 
 
 
-{% for each in customer %} Name - {{ each.pan }} Phone - {{ each.phone }} {% endfor %} {% else %}
-<h1>Hey! You Forgot To Search For A Costomer...</h1>
-{% endif %}
-<div class="position-absolute top-50 start-50 translate-middle card-main">
-    <div class="d-grid gap-3">
-        <a class="btn btn-primary btn-lg" role="button" href="/">View Aadhar</a>
-        <a class="btn btn-primary btn-lg" role="button" href="/">View Pan</a>
-        <a class="btn btn-primary btn-lg" role="button" href="/">prin</a>
+<div id="pop" class="pop-card ">
+
+    <img src="/media/{{customer.pan}}" alt="aadhar" width="60%">
+    <button onclick="hideAadhar()" type="button" class="btn-close" aria-label="Close"></button>
+</div>
+
+<div class="d-flex justify-content-center ">
+
+
+    <div class="d-grid gap-3 card-main ">
+
+
+        <div>
+            <h1>Ledger Menu</h1>
+            <h6>Booking Id - {{bid}}</h6>
+            <h6>Name - {{ customer.cname }}</h6>
+            <h6>Phone - {{ customer.phone }}</h6>
+        </div>
+
+
+        <div onclick="showAadhar()" class="btn btn-primary">View Aadhar</div>
+        <a class="btn btn-primary btn-lg " role="button " href="/ ">View Pan</a>
+        <a class="btn btn-primary btn-lg " role="button " href="/ ">Update Ledger</a>
     </div>
 </div>
+
+
+
 
 
 {% endblock %}

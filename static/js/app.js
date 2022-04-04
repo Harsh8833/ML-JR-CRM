@@ -7,5 +7,16 @@ $(document).ready(function() {
     $("#next2").click(function() {
         $("#otpdiv").hide();
         $("#ledgerdiv").show();
+        console.log("clicked")
     });
+
+
 });
+
+function showAadhar() {
+    $("#pop").show();
+}
+
+function hideAadhar() {
+    $("#pop").hide();
+}
