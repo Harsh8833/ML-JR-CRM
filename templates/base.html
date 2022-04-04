@@ -12,12 +12,12 @@
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg">
 
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> CRM-Django
+                <img src="{% static 'images\mljr-logo.png' %}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> ML JUNGLE RESORT CRM
             </a>
             {% if request.user.is_authenticated%}
 
