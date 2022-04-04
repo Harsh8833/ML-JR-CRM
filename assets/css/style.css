@@ -4,12 +4,18 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.gray_container {
-    color: gray;
+.bg {
+    background-color: #EBF5CF;
 }
 
 .container {
     padding-top: 7%;
+    align-content: center;
+}
+
+.container-2 {
+    padding-left: 2%;
+    padding-right: 2%;
     align-content: center;
 }
 
@@ -19,14 +25,23 @@ input::-webkit-inner-spin-button {
     padding: 10%;
 }
 
+.card-main {
+    background-color: #9BCB3C;
+    border-radius: 30px;
+    padding: 70px;
+    margin: 20px;
+}
+
 .form_heading {
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
-.card-main {
-    color: aqua;
-    background-color: darkgray;
-    border-radius: 30px;
-    padding: 70px;
+.btn-primary {
+    background-color: #00525B;
+    border: 0;
+}
+
+.btn-primary:hover {
+    background-color: #448086;
 }
